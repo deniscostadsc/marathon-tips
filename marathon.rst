@@ -5,7 +5,7 @@ Sobre este documento
 --------------------
 Este documento foi iniciado por Denis Costa.
 
-Para escrever este documento foi utilizado res
+Este documento foi utilizado `reStructuredText`_.
 
 Dicas Gerais
 ------------
@@ -26,7 +26,7 @@ Em Java
 ```````
 
 Algoritmos e funções mais comuns
----------------------------
+--------------------------------
 
 Números Primos
 ``````````````
@@ -47,3 +47,4 @@ dos casos o código, em C++, a baixo responde muito rápido. ::
 
 .. _Crivo de Atkins: https://en.wikipedia.org/wiki/Sieve_of_Atkin
 .. _Crivo de Eratóstenes: https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes
+.. _reStructuredText: http://docutils.sourceforge.net/rst.html
