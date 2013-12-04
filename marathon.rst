@@ -7,6 +7,8 @@ Este documento foi iniciado por Denis Costa.
 
 Este documento foi utilizado `reStructuredText`_.
 
+Data de última compilação:
+
 Dicas Gerais
 ------------
 
