@@ -203,6 +203,17 @@ Isso vai criar um arquivo `programa.class`. Para executar digite: ::
 
     java programa < in.txt
 
+Referências
+===========
+
+Em C++
+------
+`CPlusPlus.com`_
+
+Em Java
+-------
+`Java API especification`_
+
 Algoritmos e funções mais comuns
 ================================
 
@@ -223,7 +234,9 @@ dos casos o código, em C++, a baixo responde muito rápido. ::
         return true;
     }
 
+.. _CPlusPlus.com: http://www.cplusplus.com/reference/
 .. _Creative Commons: http://creativecommons.org/licenses/by/4.0/
 .. _Crivo de Atkins: https://en.wikipedia.org/wiki/Sieve_of_Atkin
 .. _Crivo de Eratóstenes: https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes
+.. _Java API especification: http://docs.oracle.com/javase/7/docs/api/index.html
 .. _reStructuredText: http://docutils.sourceforge.net/rst.html
