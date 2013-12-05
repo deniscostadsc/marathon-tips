@@ -56,7 +56,9 @@ Em C++ os tipos numéricos inteiros mais importantes são **int**, **long**, e
 **long long**. Em C++ é possível usar números o sinal de positivo e negativo.
 E nesse caso o número é sempre positivo. Se o problema que você estiver
 resolvendo não envolver números negativos e precisar armazenar números grandes,
-isso pode ser útil. ::
+isso pode ser útil.
+
+.. code:: c++
 
     #include <iostream>
 
