@@ -21,6 +21,10 @@ Dicas Gerais
     padrão da linguagem escolhida é imprescindível para se sair bem nas
     maratonas de programação.
 
+*   Treine! Como a maioria das tarefasque os seres humanos desenvolvem,
+    programar exige treino. Treine sozinho e discuta sua solução com amigos
+    que também resolveram o mesmo problema para que ambos aprendam.
+
 Variáveis
 =========
 
@@ -88,6 +92,65 @@ está na biblioteca iostream. ::
 
         return 0;
     }
+
+Compilação e execução dos programas
+===================================
+
+Apesar das IDEs (Integrated Development Environment), como Eclipse, para Java,
+e Code Blocks, para C/C++, podem ajudar muitos os programadores no dia-a-dia.
+Mas nesse capítulo a compilação dos código será explicada a partir de um
+console, cmd no Windows e Bash no Linux. As maratonas ocorrem em lugares que
+o ambiente de desenvolvimento é desconhecido para você. A única coisa que
+sempre haverá é um console.
+
+Em C++
+------
+Os software de apoio às maratonas compilam os programas C++ da seguinte forma: ::
+
+    g++ -lm programa.cpp
+
+A opção `-lm` adiciona as bibliotecas de matemática.
+
+A compilação dessa forma gera um arquivo chamado **a.exe**, no Windows, ou
+**a.out**, no Linux. Se você quiser dar um nome para o arquivo executável
+criado pelo compilador, digite: ::
+
+    g++ -lm -o programa programa.cpp
+
+A opção -o vem antes do nome do arquivo executavel.
+
+Para executar o programa que acabou de ser compilado, se você estiver no
+Linux, digite: ::
+
+    ./programa < in.txt
+
+E no Windows: ::
+
+    programa < in.txt
+
+Essa linha executa o programa e redireciona o conteúdo do arquivo de texto
+`in.txt` para a entrada padrão do programa. A entrada padrão, por default,
+recebe dados que são digitados através do teclado. Ou seja, você tem a opção
+de executar o programa o não redirecionar o conteúdo de nenhum arquivo e
+digitar todo o conteúdo. Apesar dessa opção ser válida, eu aconselho fortemente
+que você sempre coloque a entrada em um arquivo. Pois assim, só precisará
+digitar uma vez a entrada.
+
+    **Dica**: Como os programa em maratonas tem nomes, usa o padrão de colocar
+    o mesmo nome do problema no arquivo de entrada. Exemplo: `arroz.cpp` e
+    `arroz.txt`.
+
+Em Java
+-------
+
+A compilação e execução em Java são iguais para Windows e Linus. Para compilar
+os programas em Java digite: ::
+
+    javac programa.java
+
+Isso vai criar um arquivo `programa.class`. Para executar digite: ::
+
+    java programa < in.txt
 
 Algoritmos e funções mais comuns
 ================================
