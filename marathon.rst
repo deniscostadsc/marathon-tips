@@ -45,8 +45,8 @@ Variáveis
 Nas maratonas é muito importante saber os tipos que a linguagem suporta pois,
 se mal utilizado, pode acontecer de uma variável estourar o limite.
 
-Em C++
-------
+C++
+---
 
 Os típos numéricos mais importante de C++ são:
 
@@ -60,8 +60,8 @@ Os típos numéricos mais importante de C++ são:
 | long long | 64       | -9,223,372,036,854,775,808 até 9,223,372,036,854,775,807 | 0 até 18,446,744,073,309,551,615 |
 +-----------+----------+----------------------------------------------------------+----------------------------------+
 
-Em Java
--------
+Java
+----
 
 Entrada e Saída
 ===============
@@ -69,8 +69,8 @@ Entrada e Saída
 Entrada
 -------
 
-Em C++
-~~~~~~
+C++
+~~~
 
 Em C++ é possivel fazer a leitura da entrada padrão de várias formas. Para
 fazer a leitura de uma quantidade conhecida de elementos a melhor forma
@@ -135,14 +135,14 @@ e para usá-lo é preciso incluir a biblioteca **cstdio**. ::
         return 0;
     }
 
-Em Java
-~~~~~~~
+Java
+~~~~
 
 Saída
 -----
 
-Em C++
-~~~~~~
+C++
+~~~
 
 Compilação e execução dos programas
 ===================================
@@ -154,8 +154,9 @@ console, cmd no Windows e Bash no Linux. As maratonas ocorrem em lugares que
 o ambiente de desenvolvimento é desconhecido para você. A única coisa que
 sempre haverá é um console.
 
-Em C++
-------
+C++
+---
+
 Os software de apoio às maratonas compilam os programas C++ da seguinte forma: ::
 
     g++ -lm programa.cpp
@@ -206,12 +207,14 @@ Isso vai criar um arquivo `programa.class`. Para executar digite: ::
 Referências
 ===========
 
-Em C++
-------
+C++
+---
+
 `CPlusPlus.com`_
 
-Em Java
--------
+Java
+----
+
 `Java API especification`_
 
 Algoritmos e funções mais comuns
