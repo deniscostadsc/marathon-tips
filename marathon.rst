@@ -6,9 +6,23 @@ Sobre este documento
 ====================
 Este documento foi iniciado por Denis Costa.
 
-Este documento foi utilizado `reStructuredText`_ e está sob licença `Creative Commons`_.
+Este documento foi utilizado `reStructuredText`_ e está sob licença
+`Creative Commons`_.
 
 Data de última compilação:
+
+O que este documento é
+----------------------
+
+*   Guia introdutório para quem deseja comecar a participar de maratonas de
+    programação.
+
+
+O que este documento não é
+--------------------------
+
+*   Guia introdutório à programação.
+*   Guia referência para C, C++ ou Java.
 
 Dicas Gerais
 ============
@@ -79,7 +93,7 @@ talevez seja com **cin**. Para usar o **cin** é preciso incluir a biblioteca
 
 Mas o **cin** le valores separados por espaço. Se for necessário ler a linhas
 inteira e armazená-la em uma string é preciso usar o **getline**, que também
-está na biblioteca iostream. ::
+está na biblioteca **iostream**. ::
 
     #include <iostream>
 
@@ -92,6 +106,43 @@ está na biblioteca iostream. ::
 
         return 0;
     }
+
+Há proglemas que precisam que você varra caractere por caractere. Para esse
+tipo de tarefa o **getchar** pode ser útil. O **getchar** está na biblioteca
+**cstdio**. ::
+
+    #include <cstdio>
+
+    int main(){
+        char c;
+
+        c = getchar();
+
+        return 0;
+    }
+
+Em algumas ocasiões o competidor pode preferir usar o **scanf** para
+ler dados da entrada padrão. O **scanf** é uma herança da linguagem C
+e para usá-lo é preciso incluir a biblioteca **cstdio**. ::
+
+    #include <cstdio>
+
+    int main(){
+        int n;
+
+        scanf("%d", &n);
+
+        return 0;
+    }
+
+Em Java
+~~~~~~~
+
+Saída
+-----
+
+Em C++
+~~~~~~
 
 Compilação e execução dos programas
 ===================================
