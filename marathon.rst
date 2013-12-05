@@ -160,7 +160,7 @@ Os software de apoio às maratonas compilam os programas C++ da seguinte forma: 
 
     g++ -lm programa.cpp
 
-A opção `-lm` adiciona as bibliotecas de matemática.
+A opção ``-lm`` adiciona as bibliotecas de matemática.
 
 A compilação dessa forma gera um arquivo chamado ``a.exe``, no Windows, ou
 ``a.out``, no Linux. Se você quiser dar um nome para o arquivo executável
