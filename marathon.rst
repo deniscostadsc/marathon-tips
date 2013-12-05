@@ -91,9 +91,30 @@ talevez seja com **cin**. Para usar o **cin** é preciso incluir a biblioteca
         return 0;
     }
 
-Mas o **cin** le valores separados por espaço. Se for necessário ler a linhas
-inteira e armazená-la em uma string é preciso usar o **getline**, que também
-está na biblioteca **iostream**. ::
+Em algumas ocasiões o competidor pode preferir usar o **scanf** para
+ler dados da entrada padrão. O **scanf** é uma herança da linguagem C
+e para usá-lo é preciso incluir a biblioteca **cstdio**. O **scanf**
+recebe como primeiro parâmetro uma string com o formato de entrada. Dentro
+dessa string tem um "marcador" que inicia com o caractere ``%`` que indica o
+tipo do dado que vai ser lido. O segundo parâmetro é um ponteiro que aponta
+para a vaiável onde vai ser armazenado o valor. ::
+
+    #include <cstdio>
+
+    int main(){
+        int n;
+
+        scanf("%d", &n);
+
+        return 0;
+    }
+
+O **cin**, apesar da sintaxe um pouco estranha inicialmente, é menos
+burocrático que o **scanf**, por isso prefira **cin**.
+
+O **cin** e o **scanf** le valores separados por espaço. Se for necessário ler
+a linhas inteira e armazená-la em uma string é preciso usar o **getline**, que
+também está na biblioteca **iostream**. ::
 
     #include <iostream>
 
@@ -121,20 +142,6 @@ tipo de tarefa o **getchar** pode ser útil. O **getchar** está na biblioteca
         return 0;
     }
 
-Em algumas ocasiões o competidor pode preferir usar o **scanf** para
-ler dados da entrada padrão. O **scanf** é uma herança da linguagem C
-e para usá-lo é preciso incluir a biblioteca **cstdio**. ::
-
-    #include <cstdio>
-
-    int main(){
-        int n;
-
-        scanf("%d", &n);
-
-        return 0;
-    }
-
 Java
 ~~~~
 
@@ -150,6 +157,25 @@ Essa classe possui vário métodos para ler inteiros, floats, string, etc.. ::
             int n = s.nextInt();
         }
     }
+
+A classe **Scanner** possui muitos métodos para ler dados da entrada padrão.
+Os mais importante no contexto da maratona são:
+
++------------+---------------------+
+| **Método** | **Tipo de retorno** |
++------------+---------------------+
+| next       | String              |
++------------+---------------------+
+| nextLine   | String              |
++------------+---------------------+
+| nextInt    | int                 |
++------------+---------------------+
+| nextLong   | long                |
++------------+---------------------+
+| nextFloat  | float               |
++------------+---------------------+
+| nextDouble | double              |
++------------+---------------------+
 
 Saída
 -----
@@ -251,10 +277,10 @@ Algoritmos e funções mais comuns
 Números Primos
 --------------
 
-Uma função muito comum em maratonas é uma função para verificar se um
-número é primo. Alguns algoritmos como `Crivo de Eratóstenes`_ e o `Crivo
-de Atkins`_, são algoritmos extremamente eficientes. Mas grande maioria
-dos casos o código, em C++, a baixo responde muito rápido. ::
+É comum problemas de maratona envolvendo números primos. Alguns algoritmos
+como `Crivo de Eratóstenes`_ e o `Crivo de Atkins`_, são algoritmos
+extremamente eficientes. Mas na grande maioria dos casos o código, em C++ a
+baixo responde muito rápido. ::
 
     bool is_prime(int n){
         if (n == 2) return true;
