@@ -253,7 +253,7 @@ digitar todo o conteúdo. Apesar dessa opção ser válida, eu aconselho forteme
 que você sempre coloque a entrada em um arquivo. Pois assim, só precisará
 digitar uma vez a entrada.
 
-    **Dica**: Como os programa em maratonas tem nomes, usa o padrão de colocar
+    **Dica**: Como os programa em maratonas tem nomes, use o padrão de colocar
     o mesmo nome do problema no arquivo de entrada. Exemplo: `arroz.cpp` e
     `arroz.txt`.
 
