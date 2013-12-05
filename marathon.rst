@@ -204,6 +204,18 @@ Isso vai criar um arquivo `programa.class`. Para executar digite: ::
 
     java programa < in.txt
 
+Treinamento
+===========
+
+Alguns site disponibilizam problemas no formato da maratona e permitem que
+você treine livremente. Uma caracteristica muito boa desses site é que grande
+parte do acervo de problemas desses site são de maratonas antigas. Isso te dá
+uma prévia confiável de como é a maratona. Veja uma lista de alguns desses
+sites:
+
+*   `SPOJ Brasil`_
+*   `URI Online Judge`_
+
 Referências
 ===========
 
@@ -243,3 +255,5 @@ dos casos o código, em C++, a baixo responde muito rápido. ::
 .. _Crivo de Eratóstenes: https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes
 .. _Java API especification: http://docs.oracle.com/javase/7/docs/api/index.html
 .. _reStructuredText: http://docutils.sourceforge.net/rst.html
+.. _SPOJ Brasil: http://br.spoj.com/
+.. _URI Online Judge: www.urionlinejudge.com.br/
