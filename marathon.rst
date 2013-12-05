@@ -83,6 +83,10 @@ Segue uma tabela com a capacidade dos tipos em C++:
 | long long | 64       | -9,223,372,036,854,775,808 até 9,223,372,036,854,775,807 | 0 até 18,446,744,073,309,551,615 |
 +-----------+----------+----------------------------------------------------------+----------------------------------+
 
+    **Dica**: É comum em problemas de maratona o uso da notação de um potencia
+    de base 2. Exemplo: "1 <= N <= 2^32 - 1". Fique atento para esses limites.
+    Nesse caso o melhor tipo é **unsigned long**.
+
 Java
 ----
 
