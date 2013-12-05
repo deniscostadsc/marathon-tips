@@ -138,11 +138,27 @@ e para usá-lo é preciso incluir a biblioteca **cstdio**. ::
 Java
 ~~~~
 
+No Java a classe que faz a leitura dos dados da entrada padrão é a **Scanner**.
+Essa classe possui vário métodos para ler inteiros, floats, string, etc.. ::
+
+    import java.util.Scanner;
+
+    public class example {
+        public static void main(String[] args) {
+            Scanner s = new Scanner(System.in);
+
+            int n = s.nextInt();
+        }
+    }
+
 Saída
 -----
 
 C++
 ~~~
+
+Java
+~~~~
 
 Compilação e execução dos programas
 ===================================
