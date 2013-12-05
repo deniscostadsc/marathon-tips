@@ -104,7 +104,9 @@ C++
 Em C++ é possivel fazer a leitura da entrada padrão de várias formas. Para
 fazer a leitura de uma quantidade conhecida de elementos a melhor forma
 talevez seja com **cin**. Para usar o **cin** é preciso incluir a biblioteca
-**iostream**. ::
+**iostream**.
+
+.. code:: c++
 
     #include <iostream>
 
@@ -126,7 +128,9 @@ e para usá-lo é preciso incluir a biblioteca **cstdio**. O **scanf**
 recebe como primeiro parâmetro uma string com o formato de entrada. Dentro
 dessa string tem um "marcador" que inicia com o caractere ``%`` que indica o
 tipo do dado que vai ser lido. O segundo parâmetro é um ponteiro que aponta
-para a vaiável onde vai ser armazenado o valor. ::
+para a vaiável onde vai ser armazenado o valor.
+
+.. code:: c++
 
     #include <cstdio>
 
@@ -143,7 +147,9 @@ burocrático que o **scanf**, por isso prefira **cin**.
 
 O **cin** e o **scanf** le valores separados por espaço. Se for necessário ler
 a linhas inteira e armazená-la em uma string é preciso usar o **getline**, que
-também está na biblioteca **iostream**. ::
+também está na biblioteca **iostream**.
+
+.. code:: c++
 
     #include <iostream>
 
@@ -159,7 +165,9 @@ também está na biblioteca **iostream**. ::
 
 Há proglemas que precisam que você varra caractere por caractere. Para esse
 tipo de tarefa o **getchar** pode ser útil. O **getchar** está na biblioteca
-**cstdio**. ::
+**cstdio**.
+
+.. code:: c++
 
     #include <cstdio>
 
@@ -175,7 +183,9 @@ Java
 ~~~~
 
 No Java a classe que faz a leitura dos dados da entrada padrão é a **Scanner**.
-Essa classe possui vário métodos para ler inteiros, floats, string, etc.. ::
+Essa classe possui vário métodos para ler inteiros, floats, string, etc..
+
+.. code:: java
 
     import java.util.Scanner;
 
@@ -228,7 +238,9 @@ sempre haverá é um console.
 C++
 ---
 
-Os software de apoio às maratonas compilam os programas C++ da seguinte forma: ::
+Os software de apoio às maratonas compilam os programas C++ da seguinte forma:
+
+::
 
     g++ -lm programa.cpp
 
@@ -236,18 +248,24 @@ A opção ``-lm`` adiciona as bibliotecas de matemática.
 
 A compilação dessa forma gera um arquivo chamado ``a.exe``, no Windows, ou
 ``a.out``, no Linux. Se você quiser dar um nome para o arquivo executável
-criado pelo compilador, digite: ::
+criado pelo compilador, digite:
+
+::
 
     g++ -lm -o programa programa.cpp
 
 A opção -o vem antes do nome do arquivo executavel.
 
 Para executar o programa que acabou de ser compilado, se você estiver no
-Linux, digite: ::
+Linux, digite:
+
+::
 
     ./programa < in.txt
 
-E no Windows: ::
+E no Windows:
+
+::
 
     programa < in.txt
 
@@ -267,11 +285,15 @@ Em Java
 -------
 
 A compilação e execução em Java são iguais para Windows e Linux. Para compilar
-os programas em Java digite: ::
+os programas em Java digite:
+
+::
 
     javac programa.java
 
-Isso vai criar um arquivo `programa.class`. Para executar digite: ::
+Isso vai criar um arquivo `programa.class`. Para executar digite:
+
+::
 
     java programa < in.txt
 
@@ -309,7 +331,9 @@ Números Primos
 É comum problemas de maratona envolvendo números primos. Alguns algoritmos
 como `Crivo de Eratóstenes`_ e o `Crivo de Atkins`_, são algoritmos
 extremamente eficientes. Mas na grande maioria dos casos o código, em C++ a
-baixo responde muito rápido. ::
+baixo responde muito rápido.
+
+.. code:: c++
 
     bool is_prime(int n){
         if (n == 2) return true;
