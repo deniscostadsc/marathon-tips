@@ -39,7 +39,7 @@ Dicas Gerais
     que também resolveram o mesmo problema para que ambos aprendam.
 
 *   Divida os problemas entre todos os membros do time para escolher os mais
-    fáceis. O segund critério para ver se um problema é fácil é verificar o
+    fáceis. O segundo critério para ver se um problema é fácil é verificar o
     ranking e ver quais os problemas estão sendo mais respondidos pelos outros
     times.
 
