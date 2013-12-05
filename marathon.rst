@@ -28,7 +28,7 @@ Dicas Gerais
 ============
 
 *   Sempre leia o problema todo e com atenção. Apesar de grande parte do texto
-    do problema não ajudar na resolução de problema em si, as vezes informações
+    do problema não ajudar na resolução do problema em si, as vezes informações
     importantes estão perdidas no meio do enunciado
 
 *   Use a linguagem que você e seu time mais domina. Conhecer a biblioteca
