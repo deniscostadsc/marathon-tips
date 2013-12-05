@@ -17,7 +17,6 @@ O que este documento é
 *   Guia introdutório para quem deseja comecar a participar de maratonas de
     programação.
 
-
 O que este documento não é
 --------------------------
 
@@ -39,6 +38,11 @@ Dicas Gerais
     programar exige treino. Treine sozinho e discuta sua solução com amigos
     que também resolveram o mesmo problema para que ambos aprendam.
 
+*   Divida os problemas entre todos os membros do time para escolher os mais
+    fáceis. O segund critério para ver se um problema é fácil é verificar o
+    ranking e ver quais os problemas estão sendo mais respondidos pelos outros
+    times.
+
 Variáveis
 =========
 
@@ -48,10 +52,29 @@ se mal utilizado, pode acontecer de uma variável estourar o limite.
 C++
 ---
 
-Os típos numéricos mais importante de C++ são:
+Em C++ os tipos numéricos inteiros mais importantes são **int**, **long**, e
+**long long**. Em C++ é possível usar números o sinal de positivo e negativo.
+E nesse caso o número é sempre positivo. Se o problema que você estiver
+resolvendo não envolver números negativos e precisar armazenar números grandes,
+isso pode ser útil. ::
+
+    #include <iostream>
+
+    int main(){
+        int i;                  // int com sinal
+        unsigned int ui;        // int sem sinal
+        long l;                 // long com sinal
+        unsigned long ul;       // long sem sinal
+        long long ll;           // long long com sinal
+        unsigned long long ull; // long long sem sinal
+
+        return 0;
+    }
+
+Segue uma tabela com a capacidade dos tipos em C++:
 
 +-----------+----------+----------------------------------------------------------+----------------------------------+
-| **tipo**  | **bits** | **range signed**                                         | **range unsigned**               |
+| **tipo**  | **bits** | **range com sinal**                                      | **range sem sinal**              |
 +-----------+----------+----------------------------------------------------------+----------------------------------+
 | int       | 16       | -32768 até 32767                                         | 0 até 65535                      |
 +-----------+----------+----------------------------------------------------------+----------------------------------+
