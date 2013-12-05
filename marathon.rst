@@ -194,7 +194,7 @@ digitar uma vez a entrada.
 Em Java
 -------
 
-A compilação e execução em Java são iguais para Windows e Linus. Para compilar
+A compilação e execução em Java são iguais para Windows e Linux. Para compilar
 os programas em Java digite: ::
 
     javac programa.java
