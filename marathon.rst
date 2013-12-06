@@ -34,35 +34,48 @@ Dicas Gerais
     padrão da linguagem escolhida é imprescindível para se sair bem nas
     maratonas de programação.
 
-*   Treine! Como a maioria das tarefasque os seres humanos desenvolvem,
+*   Treine! Como a maioria das tarefas que os seres humanos desenvolvem,
     programar exige treino. Treine sozinho e discuta sua solução com amigos
-    que também resolveram o mesmo problema para que ambos aprendam.
+    que também resolveram o mesmo problema para que ambos aprendam. Treinos
+    em equipe também são bem-vindos.
 
-*   Divida os problemas entre todos os membros do time para escolher os mais
-    fáceis. O segundo critério para ver se um problema é fácil é verificar o
-    ranking e ver quais os problemas estão sendo mais respondidos pelos outros
-    times.
+*   Durante a maratona, divida os problemas entre todos os membros do time para
+    escolher os mais fáceis. O segundo critério para ver se um problema é fácil
+    é verificar o ranking e ver quais os problemas estão sendo mais respondidos
+    pelos outros times.
 
-Variáveis
-=========
+Tipos
+=====
 
 Nas maratonas é muito importante saber os tipos que a linguagem suporta pois,
-se mal utilizado, pode acontecer de uma variável estourar o limite.
+se mal utilizados, pode acontecer de uma variável estourar o limite.
 
 C++
 ---
 
+Inteiros
+~~~~~~~~
+
 Em C++ os tipos numéricos inteiros mais importantes são **int**, **long**, e
-**long long**. Em C++ é possível usar números o sinal de positivo e negativo.
-E nesse caso o número é sempre positivo. Se o problema que você estiver
-resolvendo não envolver números negativos e precisar armazenar números grandes,
-isso pode ser útil.
+**long long**.
+
+Em C++, existe uma versão desses tipos sem o sinal de positivo e negativo. E
+nesse caso o número é sempre positivo. Se o problema que você estiver
+resolvendo não envolver números negativos e precisar armazenar números'grandes,
+isso pode ser útil. Para usar o números sem sinal, use a palavra-chave
+``ùnsigned``.
+
+.. Código não testado
 
 .. code:: c++
 
     #include <iostream>
 
     int main(){
+        /*
+        Declaração de inteiros
+        */
+
         int i;                  // int com sinal
         unsigned int ui;        // int sem sinal
         long l;                 // long com sinal
@@ -89,6 +102,58 @@ Segue uma tabela com a capacidade dos tipos em C++:
     de base 2. Exemplo: "1 <= N <= 2^32 - 1". Fique atento para esses limites.
     Nesse caso o melhor tipo é **unsigned long**.
 
+Ponto flutuante
+~~~~~~~~~~~~~~~
+
+Ainda existem 3 tipos de ponto flutuante: **float**, **double** e **long
+double**.
+
+O float tem 6 casas decimais de precisão, caso seja necessário uma precisão
+maior use double.
+
+    **Dica**: A baixa precisão do **float** pode causar resultados divergentes.
+    Isso é bem comum quando o problema faz vários cálculos e arredondamentos
+    com o número **float**. Nesses casos prefira **double**.
+
+.. Código não testado
+
+.. code:: c++
+
+    #include <iostream>
+
+    int main(){
+        /*
+        Declaração de ponto flutuante
+        */
+
+        float f;
+        double d;
+        long double ld;
+
+        return 0;
+    }
+
+String e Char
+~~~~~~~~~~~~~
+
+Outros tipos básicos muito utilizados em maratonas são **char** e **string**.
+
+Char é um tipo primitivo de C++, que já existia em C. E possui 8 bits.
+
+Uma string é um objeto de C++ que não existia em C. Este objeto possui alguns
+métodos que facilitam a vida dos competidores em relação a quem usa C.
+
+Bool
+~~~~
+
+Em C++, diferentes de C, existe o tipo booleano.
+
+Mesmo assim as convenções de avaliação para verdadeio e falso de C ainda
+persistem.
+
+Arrays e matrizes
+~~~~~~~~~~~~~~~~~
+
 Java
 ----
 
@@ -105,6 +170,8 @@ Em C++ é possivel fazer a leitura da entrada padrão de várias formas. Para
 fazer a leitura de uma quantidade conhecida de elementos a melhor forma
 talevez seja com **cin**. Para usar o **cin** é preciso incluir a biblioteca
 **iostream**.
+
+.. Código não testado
 
 .. code:: c++
 
@@ -130,6 +197,8 @@ dessa string tem um "marcador" que inicia com o caractere ``%`` que indica o
 tipo do dado que vai ser lido. O segundo parâmetro é um ponteiro que aponta
 para a vaiável onde vai ser armazenado o valor.
 
+.. Código não testado
+
 .. code:: c++
 
     #include <cstdio>
@@ -149,6 +218,8 @@ O **cin** e o **scanf** le valores separados por espaço. Se for necessário ler
 a linhas inteira e armazená-la em uma string é preciso usar o **getline**, que
 também está na biblioteca **iostream**.
 
+.. Código não testado
+
 .. code:: c++
 
     #include <iostream>
@@ -167,6 +238,8 @@ Há proglemas que precisam que você varra caractere por caractere. Para esse
 tipo de tarefa o **getchar** pode ser útil. O **getchar** está na biblioteca
 **cstdio**.
 
+.. Código não testado
+
 .. code:: c++
 
     #include <cstdio>
@@ -184,6 +257,8 @@ Java
 
 No Java a classe que faz a leitura dos dados da entrada padrão é a **Scanner**.
 Essa classe possui vário métodos para ler inteiros, floats, string, etc..
+
+.. Código não testado
 
 .. code:: java
 
@@ -225,6 +300,9 @@ C++
 Java
 ~~~~
 
+Biblioteca padrão
+=================
+
 Compilação e execução dos programas
 ===================================
 
@@ -240,15 +318,23 @@ C++
 
 Os software de apoio às maratonas compilam os programas C++ da seguinte forma:
 
+.. Código não testado
+
 ::
 
     g++ -lm programa.cpp
 
-A opção ``-lm`` adiciona as bibliotecas de matemática.
+A opção ``-lm`` adiciona a biblioteca **math**, de matemática. Em maratonas,
+a única opção que modifica o comportamento padrão do compilador é a ``-lm``.
+Nessas competições só é permitidos o uso da biblioteca padão e a biblioteca de
+matemática. Use essa linha para compilar seus códigos e muito provavelmente
+você não terá problemas de compilação no servidor da maratona.
 
 A compilação dessa forma gera um arquivo chamado ``a.exe``, no Windows, ou
 ``a.out``, no Linux. Se você quiser dar um nome para o arquivo executável
 criado pelo compilador, digite:
+
+.. Código não testado
 
 ::
 
@@ -259,11 +345,15 @@ A opção -o vem antes do nome do arquivo executavel.
 Para executar o programa que acabou de ser compilado, se você estiver no
 Linux, digite:
 
+.. Código não testado
+
 ::
 
     ./programa < in.txt
 
 E no Windows:
+
+.. Código não testado
 
 ::
 
@@ -287,11 +377,15 @@ Em Java
 A compilação e execução em Java são iguais para Windows e Linux. Para compilar
 os programas em Java digite:
 
+.. Código não testado
+
 ::
 
     javac programa.java
 
 Isso vai criar um arquivo `programa.class`. Para executar digite:
+
+.. Código não testado
 
 ::
 
@@ -309,19 +403,6 @@ sites:
 *   `SPOJ Brasil`_
 *   `URI Online Judge`_
 
-Referências
-===========
-
-C++
----
-
-`CPlusPlus.com`_
-
-Java
-----
-
-`Java API especification`_
-
 Algoritmos e funções mais comuns
 ================================
 
@@ -333,6 +414,8 @@ como `Crivo de Eratóstenes`_ e o `Crivo de Atkins`_, são algoritmos
 extremamente eficientes. Mas na grande maioria dos casos o código, em C++ a
 baixo responde muito rápido.
 
+.. Código não testado
+
 .. code:: c++
 
     bool is_prime(int n){
@@ -343,6 +426,19 @@ baixo responde muito rápido.
         }
         return true;
     }
+
+Referências para as linguagens
+==============================
+
+C++
+---
+
+`CPlusPlus.com`_
+
+Java
+----
+
+`Java API especification`_
 
 .. _CPlusPlus.com: http://www.cplusplus.com/reference/
 .. _Creative Commons: http://creativecommons.org/licenses/by/4.0/
