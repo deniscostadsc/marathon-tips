@@ -1,504 +1,61 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-
   <head>
-    <meta charset='utf-8' />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="Marathon-tips : Dicas de maratonas de programação" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Marathon-tips by deniscostadsc</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/main.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-
-    <title>Marathon-tips</title>
   </head>
-
   <body>
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/deniscostadsc/marathon-tips">View on GitHub</a>
-
-          <h1 id="project_title">Marathon-tips</h1>
-          <h2 id="project_tagline">Dicas de maratonas de programação</h2>
-
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/deniscostadsc/marathon-tips/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/deniscostadsc/marathon-tips/tarball/master">Download this project as a tar.gz file</a>
-            </section>
-        </header>
-    </div>
-
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h1></h1>
-
-<h1>
-<a name="dicas-para-maratonas-de-programa%C3%A7%C3%A3o" class="anchor" href="#dicas-para-maratonas-de-programa%C3%A7%C3%A3o"><span class="octicon octicon-link"></span></a>Dicas para Maratonas de Programação</h1>
-
-<h1>
-<a name="sobre-este-documento" class="anchor" href="#sobre-este-documento"><span class="octicon octicon-link"></span></a>Sobre este documento</h1>
-
-<p>Este documento foi iniciado por Denis Costa.</p>
-
-<p>Este documento foi utilizado <code>reStructuredText</code>_ e está sob licença
-<code>Creative Commons</code>_.</p>
-
-<p>Data de última compilação:</p>
-
-<h2>
-<a name="o-que-este-documento-%C3%A9" class="anchor" href="#o-que-este-documento-%C3%A9"><span class="octicon octicon-link"></span></a>O que este documento é</h2>
-
-<ul>
-<li>  Guia introdutório para quem deseja comecar a participar de maratonas de
-programação.</li>
-</ul><h2>
-<a name="o-que-este-documento-n%C3%A3o-%C3%A9" class="anchor" href="#o-que-este-documento-n%C3%A3o-%C3%A9"><span class="octicon octicon-link"></span></a>O que este documento não é</h2>
-
-<ul>
-<li>  Guia introdutório à programação.</li>
-<li>  Guia referência para C, C++ ou Java.</li>
-</ul><h1>
-<a name="dicas-gerais" class="anchor" href="#dicas-gerais"><span class="octicon octicon-link"></span></a>Dicas Gerais</h1>
-
-<ul>
-<li><p>Sempre leia o problema todo e com atenção. Apesar de grande parte do texto
-do problema não ajudar na resolução do problema em si, as vezes informações
-importantes estão perdidas no meio do enunciado</p></li>
-<li><p>Use a linguagem que você e seu time mais domina. Conhecer a biblioteca
-padrão da linguagem escolhida é imprescindível para se sair bem nas
-maratonas de programação.</p></li>
-<li><p>Treine! Como a maioria das tarefas que os seres humanos desenvolvem,
-programar exige treino. Treine sozinho e discuta sua solução com amigos
-que também resolveram o mesmo problema para que ambos aprendam. Treinos
-em equipe também são bem-vindos.</p></li>
-<li><p>Durante a maratona, divida os problemas entre todos os membros do time para
-escolher os mais fáceis. O segundo critério para ver se um problema é fácil
-é verificar o ranking e ver quais os problemas estão sendo mais respondidos
-pelos outros times.</p></li>
-</ul><h1>
-<a name="tipos" class="anchor" href="#tipos"><span class="octicon octicon-link"></span></a>Tipos</h1>
-
-<p>Nas maratonas é muito importante saber os tipos que a linguagem suporta pois,
-se mal utilizados, pode acontecer de uma variável estourar o limite.</p>
-
-<h2>
-<a name="c" class="anchor" href="#c"><span class="octicon octicon-link"></span></a>C++</h2>
-
-<p>Inteiros</p>
-
-<pre><code>
-Em C++ os tipos numéricos inteiros mais importantes são **int**, **long**, e
-**long long**.
-
-Em C++, existe uma versão desses tipos sem o sinal de positivo e negativo. E
-nesse caso o número é sempre positivo. Se o problema que você estiver
-resolvendo não envolver números negativos e precisar armazenar números'grandes,
-isso pode ser útil. Para usar o números sem sinal, use a palavra-chave
-``ùnsigned``.
-
-.. Código não testado
-
-.. code:: c++
-
-    #include &lt;iostream&gt;
-
-    int main(){
-        /*
-        Declaração de inteiros
-        */
-
-        int i;                  // int com sinal
-        unsigned int ui;        // int sem sinal
-        long l;                 // long com sinal
-        unsigned long ul;       // long sem sinal
-        long long ll;           // long long com sinal
-        unsigned long long ull; // long long sem sinal
-
-        return 0;
-    }
-
-Segue uma tabela com a capacidade dos tipos em C++:
-
-+-----------+----------+----------------------------------------------------------+----------------------------------+
-| **tipo**  | **bits** | **range com sinal**                                      | **range sem sinal**              |
-+-----------+----------+----------------------------------------------------------+----------------------------------+
-| int       | 16       | -32768 até 32767                                         | 0 até 65535                      |
-+-----------+----------+----------------------------------------------------------+----------------------------------+
-| long      | 32       | -2,147,483,648 até 2,147,483,647                         | 0 até 4,294,967,295              |
-+-----------+----------+----------------------------------------------------------+----------------------------------+
-| long long | 64       | -9,223,372,036,854,775,808 até 9,223,372,036,854,775,807 | 0 até 18,446,744,073,309,551,615 |
-+-----------+----------+----------------------------------------------------------+----------------------------------+
-
-    **Dica**: É comum em problemas de maratona o uso da notação de um potencia
-    de base 2. Exemplo: "1 &lt;= N &lt;= 2^32 - 1". Fique atento para esses limites.
-    Nesse caso o melhor tipo é **unsigned long**.
-
-Ponto flutuante
-</code></pre>
-
-<p>Ainda existem 3 tipos de ponto flutuante: <strong>float</strong>, <strong>double</strong> e <strong>long
-double</strong>.</p>
-
-<p>O float tem 6 casas decimais de precisão, caso seja necessário uma precisão
-maior use double.</p>
-
-<pre><code>**Dica**: A baixa precisão do **float** pode causar resultados divergentes.
-Isso é bem comum quando o problema faz vários cálculos e arredondamentos
-com o número **float**. Nesses casos prefira **double**.
-</code></pre>
-
-<p>.. Código não testado</p>
-
-<p>.. code:: c++</p>
-
-<pre><code>#include &lt;iostream&gt;
-
-int main(){
-    /*
-    Declaração de ponto flutuante
-    */
-
-    float f;
-    double d;
-    long double ld;
-
-    return 0;
-}
-</code></pre>
-
-<p>String e Char</p>
-
-<pre><code>
-Outros tipos básicos muito utilizados em maratonas são **char** e **string**.
-
-Char é um tipo primitivo de C++, que já existia em C. E possui 8 bits.
-
-Uma string é um objeto de C++ que não existia em C. Este objeto possui alguns
-métodos que facilitam a vida dos competidores em relação a quem usa C.
-
-Bool
-</code></pre>
-
-<p>Em C++, diferentes de C, existe o tipo booleano.</p>
-
-<p>Mesmo assim as convenções de avaliação para verdadeio e falso de C ainda
-persistem.</p>
-
-<p>Arrays e matrizes</p>
-
-<pre><code>
-Java
-----
-
-Entrada e Saída
-===============
-
-Entrada
--------
-
-C++
-</code></pre>
-
-<p>Em C++ é possivel fazer a leitura da entrada padrão de várias formas. Para
-fazer a leitura de uma quantidade conhecida de elementos a melhor forma
-talevez seja com <strong>cin</strong>. Para usar o <strong>cin</strong> é preciso incluir a biblioteca
-<strong>iostream</strong>.</p>
-
-<p>.. Código não testado</p>
-
-<p>.. code:: c++</p>
-
-<pre><code>#include &lt;iostream&gt;
-
-using namespace std;
-
-int main(){
-    int n;
-    string s;
-
-    cin &gt;&gt; n;
-    cin &gt;&gt; s;
-
-    return 0;
-}
-</code></pre>
-
-<p>Em algumas ocasiões o competidor pode preferir usar o <strong>scanf</strong> para
-ler dados da entrada padrão. O <strong>scanf</strong> é uma herança da linguagem C
-e para usá-lo é preciso incluir a biblioteca <strong>cstdio</strong>. O <strong>scanf</strong>
-recebe como primeiro parâmetro uma string com o formato de entrada. Dentro
-dessa string tem um "marcador" que inicia com o caractere <code>%</code> que indica o
-tipo do dado que vai ser lido. O segundo parâmetro é um ponteiro que aponta
-para a vaiável onde vai ser armazenado o valor.</p>
-
-<p>.. Código não testado</p>
-
-<p>.. code:: c++</p>
-
-<pre><code>#include &lt;cstdio&gt;
-
-int main(){
-    int n;
-
-    scanf("%d", &amp;n);
-
-    return 0;
-}
-</code></pre>
-
-<p>O <strong>cin</strong>, apesar da sintaxe um pouco estranha inicialmente, é menos
-burocrático que o <strong>scanf</strong>, por isso prefira <strong>cin</strong>.</p>
-
-<p>O <strong>cin</strong> e o <strong>scanf</strong> le valores separados por espaço. Se for necessário ler
-a linhas inteira e armazená-la em uma string é preciso usar o <strong>getline</strong>, que
-também está na biblioteca <strong>iostream</strong>.</p>
-
-<p>.. Código não testado</p>
-
-<p>.. code:: c++</p>
-
-<pre><code>#include &lt;iostream&gt;
-
-using namespace std;
-
-int main(){
-    string s;
-
-    getline(cin, s);
-
-    return 0;
-}
-</code></pre>
-
-<p>Há proglemas que precisam que você varra caractere por caractere. Para esse
-tipo de tarefa o <strong>getchar</strong> pode ser útil. O <strong>getchar</strong> está na biblioteca
-<strong>cstdio</strong>.</p>
-
-<p>.. Código não testado</p>
-
-<p>.. code:: c++</p>
-
-<pre><code>#include &lt;cstdio&gt;
-
-int main(){
-    char c;
-
-    c = getchar();
-
-    return 0;
-}
-</code></pre>
-
-<p>Java</p>
-
-<pre><code>
-No Java a classe que faz a leitura dos dados da entrada padrão é a **Scanner**.
-Essa classe possui vário métodos para ler inteiros, floats, string, etc..
-
-.. Código não testado
-
-.. code:: java
-
-    import java.util.Scanner;
-
-    public class example {
-        public static void main(String[] args) {
-            Scanner s = new Scanner(System.in);
-
-            int n = s.nextInt();
-        }
-    }
-
-A classe **Scanner** possui muitos métodos para ler dados da entrada padrão.
-Os mais importante no contexto da maratona são:
-
-+------------+---------------------+
-| **Método** | **Tipo de retorno** |
-+------------+---------------------+
-| next       | String              |
-+------------+---------------------+
-| nextLine   | String              |
-+------------+---------------------+
-| nextInt    | int                 |
-+------------+---------------------+
-| nextLong   | long                |
-+------------+---------------------+
-| nextFloat  | float               |
-+------------+---------------------+
-| nextDouble | double              |
-+------------+---------------------+
-
-Saída
------
-
-C++
-</code></pre>
-
-<p>Java</p>
-
-<pre><code>
-Biblioteca padrão
-=================
-
-Compilação e execução dos programas
-===================================
-
-Apesar das IDEs (Integrated Development Environment), como Eclipse, para Java,
-e Code Blocks, para C/C++, podem ajudar muitos os programadores no dia-a-dia.
-Mas nesse capítulo a compilação dos código será explicada a partir de um
-console, cmd no Windows e Bash no Linux. As maratonas ocorrem em lugares que
-o ambiente de desenvolvimento é desconhecido para você. A única coisa que
-sempre haverá é um console.
-
-C++
----
-
-Os software de apoio às maratonas compilam os programas C++ da seguinte forma:
-
-.. Código não testado
-
-::
-
-    g++ -lm programa.cpp
-
-A opção ``-lm`` adiciona a biblioteca **math**, de matemática. Em maratonas,
-a única opção que modifica o comportamento padrão do compilador é a ``-lm``.
-Nessas competições só é permitidos o uso da biblioteca padão e a biblioteca de
-matemática. Use essa linha para compilar seus códigos e muito provavelmente
-você não terá problemas de compilação no servidor da maratona.
-
-A compilação dessa forma gera um arquivo chamado ``a.exe``, no Windows, ou
-``a.out``, no Linux. Se você quiser dar um nome para o arquivo executável
-criado pelo compilador, digite:
-
-.. Código não testado
-
-::
-
-    g++ -lm -o programa programa.cpp
-
-A opção -o vem antes do nome do arquivo executavel.
-
-Para executar o programa que acabou de ser compilado, se você estiver no
-Linux, digite:
-
-.. Código não testado
-
-::
-
-    ./programa &lt; in.txt
-
-E no Windows:
-
-.. Código não testado
-
-::
-
-    programa &lt; in.txt
-
-Essa linha executa o programa e redireciona o conteúdo do arquivo de texto
-`in.txt` para a entrada padrão do programa. A entrada padrão, por default,
-recebe dados que são digitados através do teclado. Ou seja, você tem a opção
-de executar o programa o não redirecionar o conteúdo de nenhum arquivo e
-digitar todo o conteúdo. Apesar dessa opção ser válida, eu aconselho fortemente
-que você sempre coloque a entrada em um arquivo. Pois assim, só precisará
-digitar uma vez a entrada.
-
-    **Dica**: Como os programa em maratonas tem nomes, use o padrão de colocar
-    o mesmo nome do problema no arquivo de entrada. Exemplo: `arroz.cpp` e
-    `arroz.txt`.
-
-Em Java
--------
-
-A compilação e execução em Java são iguais para Windows e Linux. Para compilar
-os programas em Java digite:
-
-.. Código não testado
-
-::
-
-    javac programa.java
-
-Isso vai criar um arquivo `programa.class`. Para executar digite:
-
-.. Código não testado
-
-::
-
-    java programa &lt; in.txt
-
-Treinamento
-===========
-
-Alguns site disponibilizam problemas no formato da maratona e permitem que
-você treine livremente. Uma caracteristica muito boa desses site é que grande
-parte do acervo de problemas desses site são de maratonas antigas. Isso te dá
-uma prévia confiável de como é a maratona. Veja uma lista de alguns desses
-sites:
-
-*   `SPOJ Brasil`_
-*   `URI Online Judge`_
-
-Algoritmos e funções mais comuns
-================================
-
-Números Primos
---------------
-
-É comum problemas de maratona envolvendo números primos. Alguns algoritmos
-como `Crivo de Eratóstenes`_ e o `Crivo de Atkins`_, são algoritmos
-extremamente eficientes. Mas na grande maioria dos casos o código, em C++ a
-baixo responde muito rápido.
-
-.. Código não testado
-
-.. code:: c++
-
-    bool is_prime(int n){
-        if (n == 2) return true;
-        if (n &lt; 2 || n % 2 == 0) return false;
-        for (int i = 3; i &lt;= sqrt(n); i += 2){
-            if (n % i == 0) return false;
-        }
-        return true;
-    }
-
-Referências para as linguagens
-==============================
-
-C++
----
-
-`CPlusPlus.com`_
-
-Java
-----
-
-`Java API especification`_
-
-.. _CPlusPlus.com: http://www.cplusplus.com/reference/
-.. _Creative Commons: http://creativecommons.org/licenses/by/4.0/
-.. _Crivo de Atkins: https://en.wikipedia.org/wiki/Sieve_of_Atkin
-.. _Crivo de Eratóstenes: https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes
-.. _Java API especification: http://docs.oracle.com/javase/7/docs/api/index.html
-.. _reStructuredText: http://docutils.sourceforge.net/rst.html
-.. _SPOJ Brasil: http://br.spoj.com/
-.. _URI Online Judge: www.urionlinejudge.com.br/
-</code></pre>
+      <header>
+        <h1>Marathon-tips</h1>
+        <p>Dicas de maratonas de programação</p>
+      </header>
+
+      <div id="banner">
+        <span id="logo"></span>
+
+        <a href="https://github.com/deniscostadsc/marathon-tips" class="button fork"><strong>View On GitHub</strong></a>
+        <div class="downloads">
+          <span>Downloads:</span>
+          <ul>
+            <li><a href="https://github.com/deniscostadsc/marathon-tips/zipball/master" class="button">ZIP</a></li>
+            <li><a href="https://github.com/deniscostadsc/marathon-tips/tarball/master" class="button">TAR</a></li>
+          </ul>
+        </div>
+      </div><!-- end banner -->
+
+    <div class="wrapper">
+      <nav>
+        <ul></ul>
+      </nav>
+      <section>
+        <h1>
+<a name="marathon-tips" class="anchor" href="#marathon-tips"><span class="octicon octicon-link"></span></a>marathon-tips</h1>
+
+<p>Este projeto tem como objetivo diminuir a barreira inicial dos interessados
+em participar de maratonas de programação.</p>
+
+<p>Ajuda é muito bem vinda!</p>
+
+<p>Os código desse projeto estão sob licença MIT e o documentos com as dicas sob
+licença Creative Commons.</p>
       </section>
-    </div>
-
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">Marathon-tips maintained by <a href="https://github.com/deniscostadsc">deniscostadsc</a></p>
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      <footer>
+        <p>Project maintained by <a href="https://github.com/deniscostadsc">deniscostadsc</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></small></p>
       </footer>
     </div>
-
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
     
-
   </body>
 </html>
