@@ -1,61 +1,741 @@
-<!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Marathon-tips by deniscostadsc</title>
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script src="javascripts/main.js"></script>
-    <!--[if lt IE 9]>
-      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Docutils 0.10: http://docutils.sourceforge.net/" />
+<title>Dicas para Maratonas de Programação</title>
+<style type="text/css">
 
-  </head>
-  <body>
+/*
+:Author: David Goodger (goodger@python.org)
+:Id: $Id: html4css1.css 7514 2012-09-14 14:27:12Z milde $
+:Copyright: This stylesheet has been placed in the public domain.
 
-      <header>
-        <h1>Marathon-tips</h1>
-        <p>Dicas de maratonas de programação</p>
-      </header>
+Default cascading style sheet for the HTML output of Docutils.
 
-      <div id="banner">
-        <span id="logo"></span>
+See http://docutils.sf.net/docs/howto/html-stylesheets.html for how to
+customize this style sheet.
+*/
 
-        <a href="https://github.com/deniscostadsc/marathon-tips" class="button fork"><strong>View On GitHub</strong></a>
-        <div class="downloads">
-          <span>Downloads:</span>
-          <ul>
-            <li><a href="https://github.com/deniscostadsc/marathon-tips/zipball/master" class="button">ZIP</a></li>
-            <li><a href="https://github.com/deniscostadsc/marathon-tips/tarball/master" class="button">TAR</a></li>
-          </ul>
-        </div>
-      </div><!-- end banner -->
+/* used to remove borders from tables and images */
+.borderless, table.borderless td, table.borderless th {
+  border: 0 }
 
-    <div class="wrapper">
-      <nav>
-        <ul></ul>
-      </nav>
-      <section>
-        <h1>
-<a name="marathon-tips" class="anchor" href="#marathon-tips"><span class="octicon octicon-link"></span></a>marathon-tips</h1>
+table.borderless td, table.borderless th {
+  /* Override padding for "table.docutils td" with "! important".
+     The right padding separates the table cells. */
+  padding: 0 0.5em 0 0 ! important }
 
-<p>Este projeto tem como objetivo diminuir a barreira inicial dos interessados
-em participar de maratonas de programação.</p>
+.first {
+  /* Override more specific margin styles with "! important". */
+  margin-top: 0 ! important }
 
-<p>Ajuda é muito bem vinda!</p>
+.last, .with-subtitle {
+  margin-bottom: 0 ! important }
 
-<p>Os código desse projeto estão sob licença MIT e o documentos com as dicas sob
-licença Creative Commons.</p>
-      </section>
-      <footer>
-        <p>Project maintained by <a href="https://github.com/deniscostadsc">deniscostadsc</a></p>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></small></p>
-      </footer>
-    </div>
-    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
-    
-  </body>
+.hidden {
+  display: none }
+
+a.toc-backref {
+  text-decoration: none ;
+  color: black }
+
+blockquote.epigraph {
+  margin: 2em 5em ; }
+
+dl.docutils dd {
+  margin-bottom: 0.5em }
+
+object[type="image/svg+xml"], object[type="application/x-shockwave-flash"] {
+  overflow: hidden;
+}
+
+/* Uncomment (and remove this text!) to get bold-faced definition list terms
+dl.docutils dt {
+  font-weight: bold }
+*/
+
+div.abstract {
+  margin: 2em 5em }
+
+div.abstract p.topic-title {
+  font-weight: bold ;
+  text-align: center }
+
+div.admonition, div.attention, div.caution, div.danger, div.error,
+div.hint, div.important, div.note, div.tip, div.warning {
+  margin: 2em ;
+  border: medium outset ;
+  padding: 1em }
+
+div.admonition p.admonition-title, div.hint p.admonition-title,
+div.important p.admonition-title, div.note p.admonition-title,
+div.tip p.admonition-title {
+  font-weight: bold ;
+  font-family: sans-serif }
+
+div.attention p.admonition-title, div.caution p.admonition-title,
+div.danger p.admonition-title, div.error p.admonition-title,
+div.warning p.admonition-title, .code .error {
+  color: red ;
+  font-weight: bold ;
+  font-family: sans-serif }
+
+/* Uncomment (and remove this text!) to get reduced vertical space in
+   compound paragraphs.
+div.compound .compound-first, div.compound .compound-middle {
+  margin-bottom: 0.5em }
+
+div.compound .compound-last, div.compound .compound-middle {
+  margin-top: 0.5em }
+*/
+
+div.dedication {
+  margin: 2em 5em ;
+  text-align: center ;
+  font-style: italic }
+
+div.dedication p.topic-title {
+  font-weight: bold ;
+  font-style: normal }
+
+div.figure {
+  margin-left: 2em ;
+  margin-right: 2em }
+
+div.footer, div.header {
+  clear: both;
+  font-size: smaller }
+
+div.line-block {
+  display: block ;
+  margin-top: 1em ;
+  margin-bottom: 1em }
+
+div.line-block div.line-block {
+  margin-top: 0 ;
+  margin-bottom: 0 ;
+  margin-left: 1.5em }
+
+div.sidebar {
+  margin: 0 0 0.5em 1em ;
+  border: medium outset ;
+  padding: 1em ;
+  background-color: #ffffee ;
+  width: 40% ;
+  float: right ;
+  clear: right }
+
+div.sidebar p.rubric {
+  font-family: sans-serif ;
+  font-size: medium }
+
+div.system-messages {
+  margin: 5em }
+
+div.system-messages h1 {
+  color: red }
+
+div.system-message {
+  border: medium outset ;
+  padding: 1em }
+
+div.system-message p.system-message-title {
+  color: red ;
+  font-weight: bold }
+
+div.topic {
+  margin: 2em }
+
+h1.section-subtitle, h2.section-subtitle, h3.section-subtitle,
+h4.section-subtitle, h5.section-subtitle, h6.section-subtitle {
+  margin-top: 0.4em }
+
+h1.title {
+  text-align: center }
+
+h2.subtitle {
+  text-align: center }
+
+hr.docutils {
+  width: 75% }
+
+img.align-left, .figure.align-left, object.align-left {
+  clear: left ;
+  float: left ;
+  margin-right: 1em }
+
+img.align-right, .figure.align-right, object.align-right {
+  clear: right ;
+  float: right ;
+  margin-left: 1em }
+
+img.align-center, .figure.align-center, object.align-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.align-left {
+  text-align: left }
+
+.align-center {
+  clear: both ;
+  text-align: center }
+
+.align-right {
+  text-align: right }
+
+/* reset inner alignment in figures */
+div.align-right {
+  text-align: inherit }
+
+/* div.align-center * { */
+/*   text-align: left } */
+
+ol.simple, ul.simple {
+  margin-bottom: 1em }
+
+ol.arabic {
+  list-style: decimal }
+
+ol.loweralpha {
+  list-style: lower-alpha }
+
+ol.upperalpha {
+  list-style: upper-alpha }
+
+ol.lowerroman {
+  list-style: lower-roman }
+
+ol.upperroman {
+  list-style: upper-roman }
+
+p.attribution {
+  text-align: right ;
+  margin-left: 50% }
+
+p.caption {
+  font-style: italic }
+
+p.credits {
+  font-style: italic ;
+  font-size: smaller }
+
+p.label {
+  white-space: nowrap }
+
+p.rubric {
+  font-weight: bold ;
+  font-size: larger ;
+  color: maroon ;
+  text-align: center }
+
+p.sidebar-title {
+  font-family: sans-serif ;
+  font-weight: bold ;
+  font-size: larger }
+
+p.sidebar-subtitle {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+p.topic-title {
+  font-weight: bold }
+
+pre.address {
+  margin-bottom: 0 ;
+  margin-top: 0 ;
+  font: inherit }
+
+pre.literal-block, pre.doctest-block, pre.math, pre.code {
+  margin-left: 2em ;
+  margin-right: 2em }
+
+pre.code .ln { color: grey; } /* line numbers */
+pre.code, code { background-color: #eeeeee }
+pre.code .comment, code .comment { color: #5C6576 }
+pre.code .keyword, code .keyword { color: #3B0D06; font-weight: bold }
+pre.code .literal.string, code .literal.string { color: #0C5404 }
+pre.code .name.builtin, code .name.builtin { color: #352B84 }
+pre.code .deleted, code .deleted { background-color: #DEB0A1}
+pre.code .inserted, code .inserted { background-color: #A3D289}
+
+span.classifier {
+  font-family: sans-serif ;
+  font-style: oblique }
+
+span.classifier-delimiter {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+span.interpreted {
+  font-family: sans-serif }
+
+span.option {
+  white-space: nowrap }
+
+span.pre {
+  white-space: pre }
+
+span.problematic {
+  color: red }
+
+span.section-subtitle {
+  /* font-size relative to parent (h1..h6 element) */
+  font-size: 80% }
+
+table.citation {
+  border-left: solid 1px gray;
+  margin-left: 1px }
+
+table.docinfo {
+  margin: 2em 4em }
+
+table.docutils {
+  margin-top: 0.5em ;
+  margin-bottom: 0.5em }
+
+table.footnote {
+  border-left: solid 1px black;
+  margin-left: 1px }
+
+table.docutils td, table.docutils th,
+table.docinfo td, table.docinfo th {
+  padding-left: 0.5em ;
+  padding-right: 0.5em ;
+  vertical-align: top }
+
+table.docutils th.field-name, table.docinfo th.docinfo-name {
+  font-weight: bold ;
+  text-align: left ;
+  white-space: nowrap ;
+  padding-left: 0 }
+
+h1 tt.docutils, h2 tt.docutils, h3 tt.docutils,
+h4 tt.docutils, h5 tt.docutils, h6 tt.docutils {
+  font-size: 100% }
+
+ul.auto-toc {
+  list-style-type: none }
+
+</style>
+</head>
+<body>
+<div class="document" id="dicas-para-maratonas-de-programacao">
+<h1 class="title">Dicas para Maratonas de Programação</h1>
+
+<div class="section" id="sobre-este-documento">
+<h1>Sobre este documento</h1>
+<p>Este documento foi iniciado por Denis Costa.</p>
+<p>Este documento foi utilizado <a class="reference external" href="http://docutils.sourceforge.net/rst.html">reStructuredText</a> e está sob licença
+<a class="reference external" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons</a>.</p>
+<p>Data de última compilação: 12-12-2013</p>
+<div class="section" id="o-que-este-documento-e">
+<h2>O que este documento é</h2>
+<ul class="simple">
+<li>Guia introdutório para quem deseja comecar a participar de maratonas de
+programação.</li>
+</ul>
+</div>
+<div class="section" id="o-que-este-documento-nao-e">
+<h2>O que este documento não é</h2>
+<ul class="simple">
+<li>Guia introdutório à programação.</li>
+<li>Guia referência para C, C++ ou Java.</li>
+</ul>
+</div>
+</div>
+<div class="section" id="dicas-gerais">
+<h1>Dicas Gerais</h1>
+<ul class="simple">
+<li>Sempre leia o problema todo e com atenção. Apesar de grande parte do texto
+do problema não ajudar na resolução do problema em si, as vezes informações
+importantes estão perdidas no meio do enunciado</li>
+<li>Use a linguagem que você e seu time mais domina. Conhecer a biblioteca
+padrão da linguagem escolhida é imprescindível para se sair bem nas
+maratonas de programação.</li>
+<li>Treine! Como a maioria das tarefas que os seres humanos desenvolvem,
+programar exige treino. Treine sozinho e discuta sua solução com amigos
+que também resolveram o mesmo problema para que ambos aprendam. Treinos
+em equipe também são bem-vindos.</li>
+<li>Durante a maratona, divida os problemas entre todos os membros do time para
+escolher os mais fáceis. O segundo critério para ver se um problema é fácil
+é verificar o ranking e ver quais os problemas estão sendo mais respondidos
+pelos outros times.</li>
+</ul>
+</div>
+<div class="section" id="tipos">
+<h1>Tipos</h1>
+<p>Nas maratonas é muito importante saber os tipos que a linguagem suporta pois,
+se mal utilizados, pode acontecer de uma variável estourar o limite.</p>
+<div class="section" id="c">
+<h2>C++</h2>
+<div class="section" id="inteiros">
+<h3>Inteiros</h3>
+<p>Em C++ os tipos numéricos inteiros mais importantes são <strong>int</strong>, <strong>long</strong>, e
+<strong>long long</strong>.</p>
+<p>Em C++, existe uma versão desses tipos sem o sinal de positivo e negativo. E
+nesse caso o número é sempre positivo. Se o problema que você estiver
+resolvendo não envolver números negativos e precisar armazenar números'grandes,
+isso pode ser útil. Para usar o números sem sinal, use a palavra-chave
+<tt class="docutils literal">ùnsigned</tt>.</p>
+<!-- Código não testado -->
+<pre class="code c++ literal-block">
+<span class="comment preproc">#include &lt;iostream&gt;
+</span>
+<span class="keyword type">int</span> <span class="name function">main</span><span class="punctuation">(){</span>
+    <span class="comment multiline">/*
+    Declaração de inteiros
+    */</span>
+
+    <span class="keyword type">int</span> <span class="name">i</span><span class="punctuation">;</span>                  <span class="comment single">// int com sinal
+</span>    <span class="keyword type">unsigned</span> <span class="keyword type">int</span> <span class="name">ui</span><span class="punctuation">;</span>        <span class="comment single">// int sem sinal
+</span>    <span class="keyword type">long</span> <span class="name">l</span><span class="punctuation">;</span>                 <span class="comment single">// long com sinal
+</span>    <span class="keyword type">unsigned</span> <span class="keyword type">long</span> <span class="name">ul</span><span class="punctuation">;</span>       <span class="comment single">// long sem sinal
+</span>    <span class="keyword type">long</span> <span class="keyword type">long</span> <span class="name">ll</span><span class="punctuation">;</span>           <span class="comment single">// long long com sinal
+</span>    <span class="keyword type">unsigned</span> <span class="keyword type">long</span> <span class="keyword type">long</span> <span class="name">ull</span><span class="punctuation">;</span> <span class="comment single">// long long sem sinal
+</span>
+    <span class="keyword">return</span> <span class="literal number integer">0</span><span class="punctuation">;</span>
+<span class="punctuation">}</span>
+</pre>
+<p>Segue uma tabela com a capacidade dos tipos em C++:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="10%" />
+<col width="9%" />
+<col width="51%" />
+<col width="30%" />
+</colgroup>
+<tbody valign="top">
+<tr><td><strong>tipo</strong></td>
+<td><strong>bits</strong></td>
+<td><strong>range com sinal</strong></td>
+<td><strong>range sem sinal</strong></td>
+</tr>
+<tr><td>int</td>
+<td>16</td>
+<td>-32768 até 32767</td>
+<td>0 até 65535</td>
+</tr>
+<tr><td>long</td>
+<td>32</td>
+<td>-2,147,483,648 até 2,147,483,647</td>
+<td>0 até 4,294,967,295</td>
+</tr>
+<tr><td>long long</td>
+<td>64</td>
+<td>-9,223,372,036,854,775,808 até 9,223,372,036,854,775,807</td>
+<td>0 até 18,446,744,073,309,551,615</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<strong>Dica</strong>: É comum em problemas de maratona o uso da notação de um potencia
+de base 2. Exemplo: &quot;1 &lt;= N &lt;= 2^32 - 1&quot;. Fique atento para esses limites.
+Nesse caso o melhor tipo é <strong>unsigned long</strong>.</blockquote>
+</div>
+<div class="section" id="ponto-flutuante">
+<h3>Ponto flutuante</h3>
+<p>Ainda existem 3 tipos de ponto flutuante: <strong>float</strong>, <strong>double</strong> e <strong>long
+double</strong>.</p>
+<p>O float tem 6 casas decimais de precisão, caso seja necessário uma precisão
+maior use double.</p>
+<blockquote>
+<strong>Dica</strong>: A baixa precisão do <strong>float</strong> pode causar resultados divergentes.
+Isso é bem comum quando o problema faz vários cálculos e arredondamentos
+com o número <strong>float</strong>. Nesses casos prefira <strong>double</strong>.</blockquote>
+<!-- Código não testado -->
+<pre class="code c++ literal-block">
+<span class="comment preproc">#include &lt;iostream&gt;
+</span>
+<span class="keyword type">int</span> <span class="name function">main</span><span class="punctuation">(){</span>
+    <span class="comment multiline">/*
+    Declaração de ponto flutuante
+    */</span>
+
+    <span class="keyword type">float</span> <span class="name">f</span><span class="punctuation">;</span>
+    <span class="keyword type">double</span> <span class="name">d</span><span class="punctuation">;</span>
+    <span class="keyword type">long</span> <span class="keyword type">double</span> <span class="name">ld</span><span class="punctuation">;</span>
+
+    <span class="keyword">return</span> <span class="literal number integer">0</span><span class="punctuation">;</span>
+<span class="punctuation">}</span>
+</pre>
+</div>
+<div class="section" id="string-e-char">
+<h3>String e Char</h3>
+<p>Outros tipos básicos muito utilizados em maratonas são <strong>char</strong> e <strong>string</strong>.</p>
+<p>Char é um tipo primitivo de C++, que já existia em C. E possui 8 bits.</p>
+<p>Uma string é um objeto de C++ que não existia em C. Este objeto possui alguns
+métodos que facilitam a vida dos competidores em relação a quem usa C.</p>
+</div>
+<div class="section" id="bool">
+<h3>Bool</h3>
+<p>Em C++, diferentes de C, existe o tipo booleano.</p>
+<p>Mesmo assim as convenções de avaliação para verdadeio e falso de C ainda
+persistem.</p>
+</div>
+<div class="section" id="arrays-e-matrizes">
+<h3>Arrays e matrizes</h3>
+</div>
+</div>
+<div class="section" id="java">
+<h2>Java</h2>
+</div>
+</div>
+<div class="section" id="entrada-e-saida">
+<h1>Entrada e Saída</h1>
+<div class="section" id="entrada">
+<h2>Entrada</h2>
+<div class="section" id="id1">
+<h3>C++</h3>
+<p>Em C++ é possivel fazer a leitura da entrada padrão de várias formas. Para
+fazer a leitura de uma quantidade conhecida de elementos a melhor forma
+talevez seja com <strong>cin</strong>. Para usar o <strong>cin</strong> é preciso incluir a biblioteca
+<strong>iostream</strong>.</p>
+<!-- Código não testado -->
+<pre class="code c++ literal-block">
+<span class="comment preproc">#include &lt;iostream&gt;
+</span>
+<span class="keyword">using</span> <span class="keyword">namespace</span> <span class="name">std</span><span class="punctuation">;</span>
+
+<span class="keyword type">int</span> <span class="name function">main</span><span class="punctuation">(){</span>
+    <span class="keyword type">int</span> <span class="name">n</span><span class="punctuation">;</span>
+    <span class="name">string</span> <span class="name">s</span><span class="punctuation">;</span>
+
+    <span class="name">cin</span> <span class="operator">&gt;&gt;</span> <span class="name">n</span><span class="punctuation">;</span>
+    <span class="name">cin</span> <span class="operator">&gt;&gt;</span> <span class="name">s</span><span class="punctuation">;</span>
+
+    <span class="keyword">return</span> <span class="literal number integer">0</span><span class="punctuation">;</span>
+<span class="punctuation">}</span>
+</pre>
+<p>Em algumas ocasiões o competidor pode preferir usar o <strong>scanf</strong> para
+ler dados da entrada padrão. O <strong>scanf</strong> é uma herança da linguagem C
+e para usá-lo é preciso incluir a biblioteca <strong>cstdio</strong>. O <strong>scanf</strong>
+recebe como primeiro parâmetro uma string com o formato de entrada. Dentro
+dessa string tem um &quot;marcador&quot; que inicia com o caractere <tt class="docutils literal">%</tt> que indica o
+tipo do dado que vai ser lido. O segundo parâmetro é um ponteiro que aponta
+para a vaiável onde vai ser armazenado o valor.</p>
+<!-- Código não testado -->
+<pre class="code c++ literal-block">
+<span class="comment preproc">#include &lt;cstdio&gt;
+</span>
+<span class="keyword type">int</span> <span class="name function">main</span><span class="punctuation">(){</span>
+    <span class="keyword type">int</span> <span class="name">n</span><span class="punctuation">;</span>
+
+    <span class="name">scanf</span><span class="punctuation">(</span><span class="literal string">&quot;%d&quot;</span><span class="punctuation">,</span> <span class="operator">&amp;</span><span class="name">n</span><span class="punctuation">);</span>
+
+    <span class="keyword">return</span> <span class="literal number integer">0</span><span class="punctuation">;</span>
+<span class="punctuation">}</span>
+</pre>
+<p>O <strong>cin</strong>, apesar da sintaxe um pouco estranha inicialmente, é menos
+burocrático que o <strong>scanf</strong>, por isso prefira <strong>cin</strong>.</p>
+<p>O <strong>cin</strong> e o <strong>scanf</strong> le valores separados por espaço. Se for necessário ler
+a linhas inteira e armazená-la em uma string é preciso usar o <strong>getline</strong>, que
+também está na biblioteca <strong>iostream</strong>.</p>
+<!-- Código não testado -->
+<pre class="code c++ literal-block">
+<span class="comment preproc">#include &lt;iostream&gt;
+</span>
+<span class="keyword">using</span> <span class="keyword">namespace</span> <span class="name">std</span><span class="punctuation">;</span>
+
+<span class="keyword type">int</span> <span class="name function">main</span><span class="punctuation">(){</span>
+    <span class="name">string</span> <span class="name">s</span><span class="punctuation">;</span>
+
+    <span class="name">getline</span><span class="punctuation">(</span><span class="name">cin</span><span class="punctuation">,</span> <span class="name">s</span><span class="punctuation">);</span>
+
+    <span class="keyword">return</span> <span class="literal number integer">0</span><span class="punctuation">;</span>
+<span class="punctuation">}</span>
+</pre>
+<p>Há proglemas que precisam que você varra caractere por caractere. Para esse
+tipo de tarefa o <strong>getchar</strong> pode ser útil. O <strong>getchar</strong> está na biblioteca
+<strong>cstdio</strong>.</p>
+<!-- Código não testado -->
+<pre class="code c++ literal-block">
+<span class="comment preproc">#include &lt;cstdio&gt;
+</span>
+<span class="keyword type">int</span> <span class="name function">main</span><span class="punctuation">(){</span>
+    <span class="keyword type">char</span> <span class="name">c</span><span class="punctuation">;</span>
+
+    <span class="name">c</span> <span class="operator">=</span> <span class="name">getchar</span><span class="punctuation">();</span>
+
+    <span class="keyword">return</span> <span class="literal number integer">0</span><span class="punctuation">;</span>
+<span class="punctuation">}</span>
+</pre>
+</div>
+<div class="section" id="id2">
+<h3>Java</h3>
+<p>No Java a classe que faz a leitura dos dados da entrada padrão é a <strong>Scanner</strong>.
+Essa classe possui vário métodos para ler inteiros, floats, string, etc..</p>
+<!-- Código não testado -->
+<pre class="code java literal-block">
+<span class="keyword namespace">import</span> <span class="name namespace">java.util.Scanner</span><span class="operator">;</span>
+
+<span class="keyword declaration">public</span> <span class="keyword declaration">class</span> <span class="name class">example</span> <span class="operator">{</span>
+    <span class="keyword declaration">public</span> <span class="keyword declaration">static</span> <span class="keyword type">void</span> <span class="name function">main</span><span class="operator">(</span><span class="name">String</span><span class="operator">[]</span> <span class="name">args</span><span class="operator">)</span> <span class="operator">{</span>
+        <span class="name">Scanner</span> <span class="name">s</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="name">Scanner</span><span class="operator">(</span><span class="name">System</span><span class="operator">.</span><span class="name attribute">in</span><span class="operator">);</span>
+
+        <span class="keyword type">int</span> <span class="name">n</span> <span class="operator">=</span> <span class="name">s</span><span class="operator">.</span><span class="name attribute">nextInt</span><span class="operator">();</span>
+    <span class="operator">}</span>
+<span class="operator">}</span>
+</pre>
+<p>A classe <strong>Scanner</strong> possui muitos métodos para ler dados da entrada padrão.
+Os mais importante no contexto da maratona são:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="36%" />
+<col width="64%" />
+</colgroup>
+<tbody valign="top">
+<tr><td><strong>Método</strong></td>
+<td><strong>Tipo de retorno</strong></td>
+</tr>
+<tr><td>next</td>
+<td>String</td>
+</tr>
+<tr><td>nextLine</td>
+<td>String</td>
+</tr>
+<tr><td>nextInt</td>
+<td>int</td>
+</tr>
+<tr><td>nextLong</td>
+<td>long</td>
+</tr>
+<tr><td>nextFloat</td>
+<td>float</td>
+</tr>
+<tr><td>nextDouble</td>
+<td>double</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="saida">
+<h2>Saída</h2>
+<div class="section" id="id3">
+<h3>C++</h3>
+</div>
+<div class="section" id="id4">
+<h3>Java</h3>
+</div>
+</div>
+</div>
+<div class="section" id="biblioteca-padrao">
+<h1>Biblioteca padrão</h1>
+</div>
+<div class="section" id="compilacao-e-execucao-dos-programas">
+<h1>Compilação e execução dos programas</h1>
+<p>Apesar das IDEs (Integrated Development Environment), como Eclipse, para Java,
+e Code Blocks, para C/C++, podem ajudar muitos os programadores no dia-a-dia.
+Mas nesse capítulo a compilação dos código será explicada a partir de um
+console, cmd no Windows e Bash no Linux. As maratonas ocorrem em lugares que
+o ambiente de desenvolvimento é desconhecido para você. A única coisa que
+sempre haverá é um console.</p>
+<div class="section" id="id5">
+<h2>C++</h2>
+<p>Os software de apoio às maratonas compilam os programas C++ da seguinte forma:</p>
+<!-- Código não testado -->
+<pre class="literal-block">
+g++ -lm programa.cpp
+</pre>
+<p>A opção <tt class="docutils literal"><span class="pre">-lm</span></tt> adiciona a biblioteca <strong>math</strong>, de matemática. Em maratonas,
+a única opção que modifica o comportamento padrão do compilador é a <tt class="docutils literal"><span class="pre">-lm</span></tt>.
+Nessas competições só é permitidos o uso da biblioteca padão e a biblioteca de
+matemática. Use essa linha para compilar seus códigos e muito provavelmente
+você não terá problemas de compilação no servidor da maratona.</p>
+<p>A compilação dessa forma gera um arquivo chamado <tt class="docutils literal">a.exe</tt>, no Windows, ou
+<tt class="docutils literal">a.out</tt>, no Linux. Se você quiser dar um nome para o arquivo executável
+criado pelo compilador, digite:</p>
+<!-- Código não testado -->
+<pre class="literal-block">
+g++ -lm -o programa programa.cpp
+</pre>
+<p>A opção -o vem antes do nome do arquivo executavel.</p>
+<p>Para executar o programa que acabou de ser compilado, se você estiver no
+Linux, digite:</p>
+<!-- Código não testado -->
+<pre class="literal-block">
+./programa &lt; in.txt
+</pre>
+<p>E no Windows:</p>
+<!-- Código não testado -->
+<pre class="literal-block">
+programa &lt; in.txt
+</pre>
+<p>Essa linha executa o programa e redireciona o conteúdo do arquivo de texto
+<cite>in.txt</cite> para a entrada padrão do programa. A entrada padrão, por default,
+recebe dados que são digitados através do teclado. Ou seja, você tem a opção
+de executar o programa o não redirecionar o conteúdo de nenhum arquivo e
+digitar todo o conteúdo. Apesar dessa opção ser válida, eu aconselho fortemente
+que você sempre coloque a entrada em um arquivo. Pois assim, só precisará
+digitar uma vez a entrada.</p>
+<blockquote>
+<strong>Dica</strong>: Como os programa em maratonas tem nomes, use o padrão de colocar
+o mesmo nome do problema no arquivo de entrada. Exemplo: <cite>arroz.cpp</cite> e
+<cite>arroz.txt</cite>.</blockquote>
+</div>
+<div class="section" id="em-java">
+<h2>Em Java</h2>
+<p>A compilação e execução em Java são iguais para Windows e Linux. Para compilar
+os programas em Java digite:</p>
+<!-- Código não testado -->
+<pre class="literal-block">
+javac programa.java
+</pre>
+<p>Isso vai criar um arquivo <cite>programa.class</cite>. Para executar digite:</p>
+<!-- Código não testado -->
+<pre class="literal-block">
+java programa &lt; in.txt
+</pre>
+</div>
+</div>
+<div class="section" id="treinamento">
+<h1>Treinamento</h1>
+<p>Alguns site disponibilizam problemas no formato da maratona e permitem que
+você treine livremente. Uma caracteristica muito boa desses site é que grande
+parte do acervo de problemas desses site são de maratonas antigas. Isso te dá
+uma prévia confiável de como é a maratona. Veja uma lista de alguns desses
+sites:</p>
+<ul class="simple">
+<li><a class="reference external" href="http://br.spoj.com/">SPOJ Brasil</a></li>
+<li><a class="reference external" href="www.urionlinejudge.com.br/">URI Online Judge</a></li>
+</ul>
+</div>
+<div class="section" id="algoritmos-e-funcoes-mais-comuns">
+<h1>Algoritmos e funções mais comuns</h1>
+<div class="section" id="numeros-primos">
+<h2>Números Primos</h2>
+<p>É comum problemas de maratona envolvendo números primos. Alguns algoritmos
+como <a class="reference external" href="https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes">Crivo de Eratóstenes</a> e o <a class="reference external" href="https://en.wikipedia.org/wiki/Sieve_of_Atkin">Crivo de Atkins</a>, são algoritmos
+extremamente eficientes. Mas na grande maioria dos casos o código, em C++ a
+baixo responde muito rápido.</p>
+<!-- Código não testado -->
+<pre class="code c++ literal-block">
+<span class="keyword type">bool</span> <span class="name function">is_prime</span><span class="punctuation">(</span><span class="keyword type">int</span> <span class="name">n</span><span class="punctuation">){</span>
+    <span class="keyword">if</span> <span class="punctuation">(</span><span class="name">n</span> <span class="operator">==</span> <span class="literal number integer">2</span><span class="punctuation">)</span> <span class="keyword">return</span> <span class="name builtin">true</span><span class="punctuation">;</span>
+    <span class="keyword">if</span> <span class="punctuation">(</span><span class="name">n</span> <span class="operator">&lt;</span> <span class="literal number integer">2</span> <span class="operator">||</span> <span class="name">n</span> <span class="operator">%</span> <span class="literal number integer">2</span> <span class="operator">==</span> <span class="literal number integer">0</span><span class="punctuation">)</span> <span class="keyword">return</span> <span class="name builtin">false</span><span class="punctuation">;</span>
+    <span class="keyword">for</span> <span class="punctuation">(</span><span class="keyword type">int</span> <span class="name">i</span> <span class="operator">=</span> <span class="literal number integer">3</span><span class="punctuation">;</span> <span class="name">i</span> <span class="operator">&lt;=</span> <span class="name">sqrt</span><span class="punctuation">(</span><span class="name">n</span><span class="punctuation">);</span> <span class="name">i</span> <span class="operator">+=</span> <span class="literal number integer">2</span><span class="punctuation">){</span>
+        <span class="keyword">if</span> <span class="punctuation">(</span><span class="name">n</span> <span class="operator">%</span> <span class="name">i</span> <span class="operator">==</span> <span class="literal number integer">0</span><span class="punctuation">)</span> <span class="keyword">return</span> <span class="name builtin">false</span><span class="punctuation">;</span>
+    <span class="punctuation">}</span>
+    <span class="keyword">return</span> <span class="name builtin">true</span><span class="punctuation">;</span>
+<span class="punctuation">}</span>
+</pre>
+</div>
+</div>
+<div class="section" id="referencias-para-as-linguagens">
+<h1>Referências para as linguagens</h1>
+<div class="section" id="id6">
+<h2>C++</h2>
+<p><a class="reference external" href="http://www.cplusplus.com/reference/">CPlusPlus.com</a></p>
+</div>
+<div class="section" id="id7">
+<h2>Java</h2>
+<p><a class="reference external" href="http://docs.oracle.com/javase/7/docs/api/index.html">Java API especification</a></p>
+</div>
+</div>
+</div>
+</body>
 </html>
