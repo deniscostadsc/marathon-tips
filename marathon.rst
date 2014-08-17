@@ -252,7 +252,8 @@ tipo de tarefa o **getchar** pode ser útil. O **getchar** está na biblioteca
         return 0;
     }
 
-Alguns problemas exigem que você leia uma linha inteira e depois separe as palavras por algum delimitador. Como neste exemplo: ``verde;azul;preto;branco``. Neste caso, é preciso que você primeiro leia a linha toda e depois utilize a função **strtok** (da biblioteca string.h) para fazer a separação das palavras, tendo o ";" como delimitador.
+Alguns problemas exigem que você leia uma linha inteira e depois separe as palavras por algum delimitador. Como por exemplo, imagine que você tenha esta entrada: ``verde;azul;preto;branco``. E precisa separá-la a cada ";".
+Neste caso, é necessário que você primeiro leia a linha toda e depois utilize a função **strtok** (da biblioteca string.h) para fazer a separação das palavras, tendo o ";" como delimitador.
 
 .. code:: c++
 
