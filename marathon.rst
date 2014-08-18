@@ -61,9 +61,9 @@ Em C++ os tipos numéricos inteiros mais importantes são **int**, **long**, e
 
 Em C++, existe uma versão desses tipos sem o sinal de positivo e negativo. E
 nesse caso o número é sempre positivo. Se o problema que você estiver
-resolvendo não envolver números negativos e precisar armazenar números'grandes,
+resolvendo não envolver números negativos e precisar armazenar números grandes,
 isso pode ser útil. Para usar o números sem sinal, use a palavra-chave
-``ùnsigned``.
+``unsigned``.
 
 .. Código não testado
 
@@ -234,7 +234,7 @@ também está na biblioteca **iostream**.
         return 0;
     }
 
-Há proglemas que precisam que você varra caractere por caractere. Para esse
+Há problemas que precisam que você varra caractere por caractere. Para esse
 tipo de tarefa o **getchar** pode ser útil. O **getchar** está na biblioteca
 **cstdio**.
 
@@ -251,6 +251,33 @@ tipo de tarefa o **getchar** pode ser útil. O **getchar** está na biblioteca
 
         return 0;
     }
+
+Alguns problemas exigem que você leia uma linha inteira e depois separe as palavras por algum delimitador. Como exemplo, imagine que você tenha esta entrada: ``verde;azul;preto;branco``. E precisa separá-la a cada ";".
+Neste caso, é necessário que você primeiro leia a linha toda e depois utilize a função **strtok** (da biblioteca string.h) para fazer a separação das palavras, tendo o ";" como delimitador.
+
+.. code:: c++
+
+    #include <iostream>
+    #include <string.h>
+
+    using namespace std;
+
+    int main(){
+        
+        char linha[100];
+        
+        cin >> linha;
+        
+        char *palavra = strtok(linha, ";");
+
+        while (palavra != NULL) {
+            cout << palavra << " ";
+            palavra = strtok(NULL, ";");
+        }
+
+        return 0;
+    }
+
 
 Java
 ~~~~
