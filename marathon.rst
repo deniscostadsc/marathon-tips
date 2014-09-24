@@ -277,8 +277,8 @@ Neste caso, é necessário que você primeiro leia a linha toda e depois utilize
 
         return 0;
     }
-    
-A saída do código exemplo acima é: ``verde azul preto branco ``
+
+A saída do código exemplo acima é: ``verde azul preto branco``
 
 Java
 ~~~~
